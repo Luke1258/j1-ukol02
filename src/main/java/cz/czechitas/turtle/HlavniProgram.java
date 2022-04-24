@@ -23,14 +23,10 @@ public class HlavniProgram {
     }
 
     public void nakresliRovnostrannyTrojuhelnik(double velikostStrany) {
-        // Zde lze používat proměnnou velikostStrany.
-        // Jeji hodnota je takova, s jakou byla metoda zavolana
-        zofka.move(velikostStrany);
-        zofka.turnLeft(120.0);
-        zofka.move(velikostStrany);
-        zofka.turnLeft(120.0);
-        zofka.move(velikostStrany);
-        zofka.turnLeft(120.0);
+        for (int i = 0; i < 3; i++) {
+            zofka.move(velikostStrany);
+            zofka.turnLeft(120.0);
+        }
     }
     private void nakresliCtverecek(Turtle turtle, double delkaStrany) {
         nakresliMnohouhelnik(turtle, delkaStrany, 4);
